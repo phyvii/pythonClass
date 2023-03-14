@@ -1,3 +1,4 @@
+import sys
 
 a = 1000
 b = 1000
@@ -39,4 +40,8 @@ if a > 21:
 else:
     print("a rowne 21")
 
+a = "tekst string"
+print(sys.getrefcount(a))
 
+c=5252332
+print(sys.getrefcount(c))
