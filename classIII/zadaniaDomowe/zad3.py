@@ -25,20 +25,25 @@ while True:
             if (myChoice[i] == "p" and botChoice[i] == "r") or (myChoice[i] == "r" and botChoice[i] == "s") or (
                     myChoice[i] == "s" and botChoice[i] == "p"):
                 myScore = myScore + 1
+            elif(myChoice[i] == "p" and botChoice[i] == "p") or (myChoice[i] == "r" and botChoice[i] == "r") or (
+                    myChoice[i] == "s" and botChoice[i] == "s"):
+                    myScore+=1
+                    botScore+=1
             else:
                 botScore+=1
+
         if myScore>botScore:
-            print("you win!")
+            print(player1+" win!")
         elif myScore == botScore:
             print("draw!")
         else:
-            print("bot wins!")
+            print(player2+" wins!")
+
         myChoice.clear()
         botChoice.clear()
         myScore = 0
         botScore = 0
 
-        break
     elif(gameMode == "C"):
         rounds = int(input("How many rounds would you like to play?(enter a number): "))
         for i in range(0,rounds):
@@ -50,8 +55,13 @@ while True:
             if (myChoice[i] == "p" and botChoice[i] == "r") or (myChoice[i] == "r" and botChoice[i] == "s") or (
                     myChoice[i] == "s" and botChoice[i] == "p"):
                 myScore = myScore + 1
+            elif (myChoice[i] == "p" and botChoice[i] == "p") or (myChoice[i] == "r" and botChoice[i] == "r") or (
+                    myChoice[i] == "s" and botChoice[i] == "s"):
+                myScore += 1
+                botScore += 1
             else:
-                botScore+=1
+                botScore += 1
+
         if(myScore>botScore):
             print("you win!")
         elif(myScore == botScore):
@@ -68,5 +78,3 @@ while True:
     else:
         print("Incorrect choice, try again or enter 0 to leave")
 
-for i in myScore:
-    print(i);
